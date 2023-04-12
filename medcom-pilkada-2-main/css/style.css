@@ -900,6 +900,14 @@ select {
 .affix.header-2 .main-menu .navbar .nav > li.partai > a:visited {
   padding-bottom: 17px;
 }
+.header-2 .main-menu .navbar .nav > li.kandidat > a,
+.header-2 .main-menu .navbar .nav > li.kandidat > a:visited {
+  padding-bottom: 35px;
+}
+.affix.header-2 .main-menu .navbar .nav > li.kandidat > a,
+.affix.header-2 .main-menu .navbar .nav > li.kandidat > a:visited {
+  padding-bottom: 17px;
+}
 .header-3 .main-menu .navbar .nav > li > a,
 .header-3 .main-menu .navbar .nav > li > a:visited {
   padding-top: 45px;
@@ -1030,6 +1038,7 @@ select {
   color: #fff;
   border-color: #fff;
 }
+
 .header .main-menu .sub {
   background: #fff;
   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -1082,6 +1091,12 @@ select {
   transition: all 0.2s ease 0s;
 }
 .header .main-menu .sub a.partai {
+  background: #565a60;
+  color: #fff;
+  padding-left: 15px;
+  transition: all 0.2s ease 0s;
+}
+.header .main-menu .sub a.kandidat {
   background: #565a60;
   color: #fff;
   padding-left: 15px;
@@ -2305,6 +2320,9 @@ header.affix .logo .logo-img {
 .tab-pane {
   border: none;
 }
+.row .tabs_detail .col-md-3 {
+  padding-top: 0px;
+}
 
 /* #BLOCKQUOTES
 ==================================================*/
@@ -2696,7 +2714,12 @@ blockquote p {
 .row .col-md-3 {
   padding-top: 50px;
 }
-
+.row .info_detail .col-md-3 {
+  padding-top: 0px;
+}
+.row .info_partai .col-md-3 {
+  padding-top: 0px;
+}
 /* #SERVICES
 ================================================== */
 .sevice-item {
@@ -2935,6 +2958,7 @@ blockquote p {
   height: 90px;
   width: 90px;
   margin: 0;
+  object-fit: cover;
   transition: all 0.3s linear 0s;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -2974,7 +2998,7 @@ blockquote p {
   padding: 0;
 }
 .lp-title-cont {
-  padding-left: 90px;
+  padding-left: 93px;
   padding-top: 8px;
 }
 
@@ -3602,7 +3626,7 @@ ul#filters li a.selected {
 
 /*****	#PORTFOLIO SINGLE	*****/
 .project-details-list li {
-  height: 55px;
+  height: 60px;
 }
 .portfolio-item-caption-container {
   position: absolute;
@@ -4301,14 +4325,14 @@ h2 {
   font-size: 2.6em;
   font-weight: 300;
   line-height: 42px;
-  margin: 50px 0 18px 0;
+  margin: 20px 0 18px 0;
 }
 h3 {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 32px;
-  margin: 26px 0 16px 0;
+  margin: 14px 0 16px 0;
 }
 h4 {
   font-size: 1.4em;
@@ -4532,7 +4556,7 @@ pre {
 /***** #RESPONSIVE HEADINGS*****/
 @media (max-width: 479px) {
   h2 {
-    line-height: 40px;
+    line-height: 60px;
   }
 }
 @media (max-width: 767px) {
@@ -5083,7 +5107,6 @@ a:hover {
 }
 .a-invert {
   color: #4b4e53;
-  line-height: 1.5;
 }
 .a-invert:hover {
   color: #deae2e;
@@ -6167,7 +6190,18 @@ h3.ui-accordion-header:first-child {
   width: 100%;
   display: block;
   position: relative;
-  /* padding-bottom: 20px; */
+}
+.img_detailpartai .view img {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 20px;
+}
+.img_detailkandidat .view img {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 20px;
 }
 .view h2 {
   text-transform: uppercase;
@@ -6323,7 +6357,6 @@ ul#portfolio {
 
 .orasi h2 {
   font-size: 28px;
-  padding: 0 !imp;
 }
 
 .orasi .blog-inline-item .blog-caption-container {
@@ -8171,11 +8204,22 @@ ul.list-icons i {
     padding-left: 15px;
     transition: all 0.2s ease 0s;
   }
+  .header .main-menu .sub a.kandidat {
+    background: #fff;
+    color: #414146 !important;
+    padding-left: 15px;
+    transition: all 0.2s ease 0s;
+  }
   .header .main-menu .navbar .nav > li.parent:hover > a {
     background-color: #77797d !important;
     color: #fff;
   }
   .header .main-menu .navbar .nav > li.partai > a {
+    background: #77797d !important;
+    color: #fff !important;
+    border-bottom: none !important;
+  }
+  .header .main-menu .navbar .nav > li.kandidat > a {
     background: #77797d !important;
     color: #fff !important;
     border-bottom: none !important;
@@ -8267,6 +8311,10 @@ ul.list-icons i {
     color: #414146;
     border-right: #dfdfdf 5px solid;
   }
+  .header .main-menu .megamenu .title.kandidat {
+    color: #414146;
+    border-right: #dfdfdf 5px solid;
+  }
   .header .main-menu .megamenu > .sub .box.closed ul {
     display: none;
     margin-left: 45px;
@@ -8344,6 +8392,9 @@ ul.list-icons i {
   Max Width "1024px" TABLET
 *******************************************************************************/
 @media (max-width: 1024px) {
+  .container .banner_qc img {
+    padding-top: 30px;
+  }
   /*	#BOXES 2  ========================================*/
   .feature-box2 .ca-main {
     padding-top: 26px;
@@ -8393,10 +8444,19 @@ ul.list-icons i {
 *******************************************************************************/
 @media (max-width: 479px) {
   body {
-    font-size: 13px;
+    font-size: 16px;
   }
   #big-map-contact {
     height: 300px;
+  }
+  .container .banner_qc img {
+    padding-top: 30px;
+  }
+  .title-block {
+    font-size: 14px;
+  }
+  .button.medium {
+    font-size: 12px;
   }
 }
 
